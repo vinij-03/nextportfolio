@@ -8,9 +8,28 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        inconsolata: ["Inconsolata", "monospace"],
+      },
+      animation: {
+        "spin-slow": "spin 30s linear infinite",
+        "spin-slow-reverse": "spin 30s linear infinite reverse",
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        // Light theme colors
+        light: {
+          primary: '#3b82f6',
+          secondary: '#22c55e',
+          background: '#f9fafb',
+          text: '#1f2937',
+        },
+        // Dark theme colors
+        dark: {
+          primary: '#2563eb',
+          secondary: '#16a34a',
+          background: '#1f2937',
+          text: '#f9fafb',
+        },
       },
     },
   },
