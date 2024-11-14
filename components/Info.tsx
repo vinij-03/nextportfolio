@@ -34,7 +34,7 @@ const Info = () => {
     const handlers = useSwipeable({
         onSwipedLeft: nextImage,
         onSwipedRight: prevImage,
-        preventDefaultTouchmoveEvent: true,
+        // preventDefaultTouchmoveEvent: true,
         trackMouse: true
     });
 
