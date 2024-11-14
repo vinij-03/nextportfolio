@@ -12,8 +12,8 @@ const experiences = [
             "Acted as the firm's representative at 4 international events and 6 investor pitches.",
             "Secured a total of INR 9 Lakh in funding for the firm within one year."
         ],
-        image: "/images/photo1.jpg", // Replace with actual path
-        website: "https://twinverse.com" // Replace with actual URL
+        image: "/imgExp/twinv.jpg", // Replace with actual path
+        website: "https://twinverse.in" // Replace with actual URL
     },
     {
         company: "S'O’A Fablab",
@@ -24,8 +24,8 @@ const experiences = [
             "Executed two major Hackathons, Code For Odisha and Innovate Odisha 1.0, with 20+ teams from Odisha, encouraging student innovation.",
             "Delivered seminars on REST APIs and Frontend Development (HTML, CSS, JavaScript) to over 50 participants."
         ],
-        image: "/images/photo1.jpg", // Replace with actual path
-        website: "https://soafablab.com" // Replace with actual URL
+        image: "/imgExp/FabLab.png", // Replace with actual path
+        website: "https://karkhana.co.in/soafablab/" // Replace with actual URL
     }
 ];
 const projects = [
@@ -37,7 +37,7 @@ const projects = [
             "Designed a scalable backend infrastructure using Node.js, enhancing performance and reducing response time by 40%.",
             "Implemented a JWT authentication system with MongoDB, ensuring high data security."
         ],
-        github: "https://github.com/username/my-chat", // Replace with actual GitHub link
+        github: "https://github.com/vinij-03/Chat-App.git", // Replace with actual GitHub link
         image: "/imgWork/ChatApp.png" // Replace with actual image path
     },
     {
@@ -48,7 +48,7 @@ const projects = [
             "Developed a user-friendly fullstack platform allowing users to upload and integrate personalized 3D models, enhancing customization capabilities.",
             "Implemented user-based authentication to efficiently store and manage 3D models, ensuring cross-device accessibility and consistent user experiences."
         ],
-        github: "https://github.com/username/my-ar", // Replace with actual GitHub link
+        github: "https://github.com/vinij-03/MY-AR.git", // Replace with actual GitHub link
         image: "/imgWork/MyAR.png" // Replace with actual image path
     },
     {
@@ -59,7 +59,7 @@ const projects = [
             "Utilized the Go standard library and JSON for seamless data handling and storage.",
             "Designed the system to support piping input from other programs and ensure well-formatted output."
         ],
-        github: "https://github.com/username/cli-todo", // Replace with actual GitHub link
+        github: "https://github.com/vinij-03/CLI-ToDo.git", // Replace with actual GitHub link
         image: "/imgWork/Clitodo.png" // Replace with actual image path
     }
 ];

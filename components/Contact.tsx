@@ -9,22 +9,22 @@ const Contact = () => {
     const socials = [
         {
             name: 'Twitter',
-            href: 'https://twitter.com',
+            href: 'https://x.com/vineetjana',
             icon: <FaTwitter className="text-xl" />
         },
         {
             name: 'GitHub',
-            href: 'https://github.com',
+            href: 'https://github.com/vinij-03',
             icon: <FaGithub className="text-xl" />
         },
         {
             name: 'LinkedIn',
-            href: 'https://linkedin.com',
+            href: 'www.linkedin.com/in/vineetjana',
             icon: <FaLinkedinIn className="text-xl" />
         },
         {
             name: 'Email',
-            href: 'mailto:example@email.com',
+            href: 'mailto:vineetjana3@gmail.com',
             icon: <FaEnvelope className="text-xl" />
         }
     ];
