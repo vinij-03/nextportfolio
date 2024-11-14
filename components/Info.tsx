@@ -1,14 +1,13 @@
 import { useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
 
 const Info = () => {
     const achievements = [
         { year: '2022', achievement: 'Won GITEX Global Dubai SuperNova YouthX Hackathon' },
         { year: '2023', achievement: 'Co-founded Twinverse Tech recognized by Startup India' },
         { year: '2023', achievement: 'Represented at G20 India (Sikkim & Bhubaneswar) & Indian Mobile Congress' },
-        { year: '2023', achievement: ' Won Best Student Startup Award 2023 Startup Odisha' },
+        { year: '2023', achievement: 'Won Best Student Startup Award 2023 Startup Odisha' },
         { year: '2023', achievement: 'Startup India Award - 2023 Nominee' }
-
-        // Add more achievements as needed
     ];
 
     const galleryImages = [
@@ -20,7 +19,6 @@ const Info = () => {
         '/imgGallery/Vineet jana 6.jpg',
         '/imgGallery/Vineet jana 7.jpg',
         '/imgGallery/Vineet jana 8.jpg',
-        // '/imgGallery/Vineet jana 9.jpg',
     ];
 
     const [currentImage, setCurrentImage] = useState(0);
@@ -33,8 +31,15 @@ const Info = () => {
         setCurrentImage((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
     };
 
+    const handlers = useSwipeable({
+        onSwipedLeft: nextImage,
+        onSwipedRight: prevImage,
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true
+    });
+
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen px-6 py-20 lg:px-20 ">
+        <div className="flex flex-col items-center justify-center min-h-screen px-6 py-20 lg:px-20">
             {/* About Me Section */}
             <div className="mb-10 w-full lg:w-3/4 text-center lg:text-left">
                 <h2 className="text-3xl font-bold mb-4 font-inconsolata">About Me</h2>
@@ -66,11 +71,10 @@ const Info = () => {
                             ))}
                         </tbody>
                     </table>
-
                 </div>
 
-                {/* Gallery Carousel */}
-                <div className="w-full lg:w-1/2 relative">
+                {/* Gallery Carousel with Swipe Handling */}
+                <div className="w-full lg:w-1/2 relative" {...handlers}>
                     <div className="relative w-full h-full overflow-hidden rounded-lg">
                         <img
                             src={galleryImages[currentImage]}
@@ -113,14 +117,10 @@ const Info = () => {
                             </svg>
                         </div>
                     </div>
-
                 </div>
-
-
             </div>
         </div>
     );
 };
 
 export default Info;
-
