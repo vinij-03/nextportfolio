@@ -3,11 +3,11 @@ const experiences = [
     {
         company: "Twinverse Technology",
         duration: "Dec. 2022 - Present",
-        role: "Co-Founder and Web XR Developer",
+        role: "Founding Member and Web XR Developer",
         tech: "React, Three.js, Babylon.js, MongoDB",
         description: [
-            "Enhanced Web VR services to showcase architectural projects using ThreeJs and R3F.",
-            "Successfully led a team of 9 individuals across 7 client projects.",
+            "Led the software and business development teams to complete 2 client projects with a team of 8",
+            "Developed a full-stack Virtual Reality (VR) app using Three.js and React Js, increasing clients’s real estate sales by 20%",
             "Handled all copywriting responsibilities for the firm.",
             "Acted as the firm's representative at 4 international events and 6 investor pitches.",
             "Secured a total of INR 9 Lakh in funding for the firm within one year."
