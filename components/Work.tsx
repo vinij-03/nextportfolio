@@ -6,9 +6,9 @@ const experiences = [
         role: "Founding Member and Web XR Developer",
         tech: "React, Three.js, Babylon.js, MongoDB",
         description: [
-            "Led the software and business development teams to complete 2 client projects with a team of 8",
-            "Developed a full-stack Virtual Reality (VR) app using Three.js and React Js, increasing clients’s real estate sales by 20%",
-            "Handled all copywriting responsibilities for the firm.",
+            "Led 8-member software and business development teams to complete 2 client projects successfully.",
+            "Developed VR app using Three.js and React.js, boosting client real estate sales by 20%.",
+            "Managed all firm's copywriting responsibilities, creating compelling brand narratives.",
             "Acted as the firm's representative at 4 international events and 6 investor pitches.",
             "Secured a total of INR 9 Lakh in funding for the firm within one year."
         ],
