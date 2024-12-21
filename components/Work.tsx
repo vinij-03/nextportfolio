@@ -119,7 +119,7 @@ function Work() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 justify-center">
                     {projects.map((project, index) => (
                         <div key={index} className="border border-gray-300 rounded-lg p-4">
-                            <a href={project.github} target="_blank" rel="noopener noreferrer">
+                            <a href={"https://vini-chat-app.vercel.app/"} target="_blank" rel="noopener noreferrer">
                                 <img
                                     src={project.image}
                                     alt={project.title}
