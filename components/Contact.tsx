@@ -19,7 +19,7 @@ const Contact = () => {
         },
         {
             name: 'LinkedIn',
-            href: 'www.linkedin.com/in/vineetjana',
+            href: 'https://www.linkedin.com/in/vineetjana',
             icon: <FaLinkedinIn className="text-xl" />
         },
         {
