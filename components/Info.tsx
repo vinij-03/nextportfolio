@@ -22,48 +22,34 @@ const Info = () => {
     ];
 
     const [currentImage, setCurrentImage] = useState(0);
-    const [autoScroll, setAutoScroll] = useState(true);
-    const autoScrollIntervalRef = useRef(null);
-
-    // Start auto-scroll when component mounts
-    useEffect(() => {
-        if (autoScroll) {
-            autoScrollIntervalRef.current = setInterval(() => {
-                setCurrentImage((prev) => (prev + 1) % galleryImages.length);
-            }, 3000); // Change image every 3 seconds
-        }
-
-        // Clean up interval on unmount or when autoScroll changes
-        return () => {
-            if (autoScrollIntervalRef.current) {
-                clearInterval(autoScrollIntervalRef.current);
-            }
-        };
-    }, [autoScroll, galleryImages.length]);
-
-    // Pause auto-scroll when user interacts with the carousel
-    const pauseAutoScroll = () => {
-        setAutoScroll(false);
-        // Restart auto-scroll after 10 seconds of inactivity
-        setTimeout(() => setAutoScroll(true), 10000);
-    };
+    const autoScrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
     const nextImage = () => {
-        pauseAutoScroll();
         setCurrentImage((prev) => (prev + 1) % galleryImages.length);
     };
 
     const prevImage = () => {
-        pauseAutoScroll();
         setCurrentImage((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
     };
 
     const handlers = useSwipeable({
         onSwipedLeft: nextImage,
         onSwipedRight: prevImage,
-        // preventDefaultTouchmoveEvent: true,
         trackMouse: true
     });
+
+    // Auto-scroll effect
+    useEffect(() => {
+        autoScrollIntervalRef.current = setInterval(() => {
+            setCurrentImage((prev) => (prev + 1) % galleryImages.length);
+        }, 4000); // Change image every 4 seconds
+
+        return () => {
+            if (autoScrollIntervalRef.current) {
+                clearInterval(autoScrollIntervalRef.current);
+            }
+        };
+    }, []);
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen px-6 py-20 lg:px-20">
@@ -72,8 +58,8 @@ const Info = () => {
                 <h2 className="text-3xl font-bold mb-4 font-inconsolata">About Me</h2>
                 <p className="text-lg leading-relaxed font-inconsolata">
                     Hi! I&apos;m Vineet, a Computer Science undergrad with a passion for immersive technologies.
-                    As the co-founder of Twinverse Tech, I've dedicated myself to transforming big tech ideas into reality
-                    through AR and VR. Whether it's building new tools or pushing boundaries, I love to innovate and lead.
+                    As the co-founder of Twinverse Tech, I’ve dedicated myself to transforming big tech ideas into reality
+                    through AR and VR. Whether it’s building new tools or pushing boundaries, I love to innovate and lead.
                 </p>
             </div>
 
